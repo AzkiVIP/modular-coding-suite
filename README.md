@@ -35,3 +35,7 @@ The root `skills/` directory is the canonical portable source. The plugin's `ski
 ## License
 
 MIT. See [`LICENSE`](LICENSE).
+
+## Credits
+
+Created by AzkiVIP  <img src="https://i.imgur.com/vMTgvCV.png" width="16">.
