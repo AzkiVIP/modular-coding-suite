@@ -1,10 +1,10 @@
 # Modular Coding Suite v1.0.0
 
-A modular, portable set of ten `SKILL.md` guides for AI coding assistants. Use the orchestrator first to select the smallest relevant set of specialists, then apply and verify their guidance.
+A modular, portable collection of ten `SKILL.md` guides designed to instruct AI coding assistants. Start with the orchestrator to select the smallest relevant set of specialist skills, then apply and verify their guidance.
 
 This is the **first public release**. Earlier numbered archives were internal development snapshots; their numbering is not part of the public release sequence.
 
-## Included skills
+## Included Skills
 
 - `coding-orchestrator` — selects and coordinates the smallest relevant set of specialists.
 - `architecture` — system boundaries, structure, and design trade-offs.
@@ -17,20 +17,48 @@ This is the **first public release**. Earlier numbered archives were internal de
 - `testing-quality` — tests, regression coverage, and evidence-based verification.
 - `technical-research` — documentation, APIs, libraries, and compatibility research.
 
-## Portable usage
+## Important: These Are Instructions for AI Assistants
+
+**The contents of each `SKILL.md` file are instructions intended for an AI assistant to read and apply when performing relevant coding tasks.**
+
+These files are not executable programs, standalone AI models, or merely reference articles. They provide task-specific guidance for how an AI assistant should plan, design, implement, investigate, and verify software.
+
+Humans can read, review, and modify these files. However, their primary purpose is to guide the behavior and workflow of an AI coding assistant.
+
+The `coding-orchestrator` skill helps the AI determine which specialist skills are relevant to a task. The assistant should use only the necessary specialists instead of blindly applying every skill to every request.
+
+**Important:** Having these files in a repository does not guarantee that an AI assistant will read or follow them. Automatic loading and skill invocation depend on the host AI tool and its configuration.
+
+## Portable Usage
 
 1. Read [`skills/coding-orchestrator/SKILL.md`](skills/coding-orchestrator/SKILL.md) first.
-2. Follow its selection rules to identify relevant specialists.
-3. Read the selected `SKILL.md` files before applying their workflows.
+2. Follow its selection rules to identify the relevant specialist skills.
+3. Read the selected `SKILL.md` files and apply their instructions to the task.
 4. Verify the actual result and report what was and was not tested.
 
-The suite is a set of instruction documents, not a runnable application. Whether skills are automatically loaded or coordinated depends on the host AI tool. If automatic skill invocation is unavailable, the model or user must explicitly provide the relevant files and follow their instructions. Do not claim an automatic invocation that did not happen.
+The suite is a collection of instruction documents, not a runnable application. If the host AI tool cannot automatically load or invoke skills, provide the relevant files to the AI explicitly and tell it to follow their instructions.
 
-## Claude Code plugin distribution
+Do not claim that a skill was automatically loaded, invoked, or followed unless that actually happened.
 
-A Claude Code plugin package is included under [`distributions/claude-code/`](distributions/claude-code/). Its plugin manifest and skill directory follow Claude Code's plugin layout. When making a plugin release ZIP, package the **contents of that plugin directory** (including `.claude-plugin/` and `skills/`) rather than uploading the whole repository as a plugin.
+### Prompt for AI Assistants
 
-The root `skills/` directory is the canonical portable source. The plugin's `skills/` directory is a distribution copy; when updating skills, sync it from the canonical source before packaging a new plugin release.
+If your AI coding assistant does not support automatic skill loading, you can provide the relevant `SKILL.md` files with the following prompt:
+
+> **Instructions for the AI assistant:**
+>
+> Read and apply the provided Modular Coding Suite skill instructions when working on the requested task. Start with `coding-orchestrator/SKILL.md` to identify the smallest relevant set of specialist skills. Read the selected skill files before proceeding, and use their guidance where applicable.
+>
+> Treat the skill files as instructions for your work, not as documents to summarize unless summarization is specifically requested. Do not blindly apply irrelevant skills or introduce unnecessary complexity.
+>
+> Respect the task requirements, applicable higher-priority instructions, and the actual capabilities and permissions of your environment. Verify the result as thoroughly as the available tools allow, and clearly distinguish what was verified from what remains untested. Never claim to have read, applied, or tested something that you did not.
+
+## Claude Code Plugin Distribution
+
+A Claude Code plugin package is included under [`distributions/claude-code/`](distributions/claude-code/). Its plugin manifest and skill directory follow Claude Code's plugin layout.
+
+When creating a plugin release ZIP, package the **contents of the plugin directory**, including `.claude-plugin/` and `skills/`, rather than uploading the whole repository as a plugin.
+
+The root `skills/` directory is the canonical portable source. The plugin's `skills/` directory is a distribution copy. When updating skills, synchronize the plugin copy with the canonical source before packaging a new plugin release.
 
 ## License
 
