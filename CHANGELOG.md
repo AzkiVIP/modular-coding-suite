@@ -1,6 +1,6 @@
 # Changelog
 
-## 1.0.0 — Initial public release
+## [1.0.0 — Initial public release](https://github.com/AzkiVIP/modular-coding-suite/releases/tag/v1.0.0)
 
 This release consolidates the intended baseline after internal development and Task Board experiments.
 
