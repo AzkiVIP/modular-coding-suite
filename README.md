@@ -40,17 +40,25 @@ The suite is a collection of instruction documents, not a runnable application. 
 
 Do not claim that a skill was automatically loaded, invoked, or followed unless that actually happened.
 
-### Prompt for AI Assistants
+### Optional: Manual Skill Usage Prompt
 
-If your AI coding assistant does not support automatic skill loading, you can provide the relevant `SKILL.md` files with the following prompt:
+Use this prompt when your AI coding assistant can access the skill files but does not automatically select or apply them. If your platform already supports automatic skill loading and invocation, follow its native setup instead.
 
-> **Instructions for the AI assistant:**
->
-> Read and apply the provided Modular Coding Suite skill instructions when working on the requested task. Start with `coding-orchestrator/SKILL.md` to identify the smallest relevant set of specialist skills. Read the selected skill files before proceeding, and use their guidance where applicable.
->
-> Treat the skill files as instructions for your work, not as documents to summarize unless summarization is specifically requested. Do not blindly apply irrelevant skills or introduce unnecessary complexity.
->
-> Respect the task requirements, applicable higher-priority instructions, and the actual capabilities and permissions of your environment. Verify the result as thoroughly as the available tools allow, and clearly distinguish what was verified from what remains untested. Never claim to have read, applied, or tested something that you did not.
+Copy the prompt below and provide access to the relevant `SKILL.md` files:
+
+```text
+Read and apply the provided Modular Coding Suite skill instructions when working on the requested task.
+
+Start by reading `coding-orchestrator/SKILL.md` to identify the smallest relevant set of specialist skills. Read the selected skill files before proceeding, and apply their instructions where relevant.
+
+Treat the skill files as instructions for your work, not as documents to summarize unless summarization is specifically requested. Do not blindly apply irrelevant skills or introduce unnecessary complexity.
+
+Respect the task requirements, higher-priority instructions, and the actual capabilities and permissions of your environment.
+
+Verify the result as thoroughly as the available tools allow. Clearly distinguish what was verified from what remains untested. Never claim to have read, applied, or tested something that you did not.
+```
+
+**Note:** This prompt does not provide access to skill files by itself. Ensure the AI can read the relevant files before using it.
 
 ## Claude Code Plugin Distribution
 
