@@ -1,13 +1,26 @@
 # Modular Coding Suite — Claude Code Plugin v1.0.0
 
-This directory is the Claude Code plugin distribution of Modular Coding Suite. It includes `.claude-plugin/plugin.json` and the `skills/` directory at the plugin root.
+This directory is the Claude Code plugin distribution of Modular Coding Suite. It includes `.claude-plugin/plugin.json`, the ten skill directories under `skills/`, and the project's Apache-2.0 license.
 
-For portable source files intended for other AI tools, use the repository's top-level `skills/` directory. It is the canonical source; this plugin folder is a packaging copy.
+The root repository `skills/` directory is the canonical portable source. This directory is a distribution copy and should be synchronized whenever the canonical skills are updated.
 
 ## Packaging
 
-Create a plugin ZIP from the **contents of this directory**, so the archive root contains `.claude-plugin/` and `skills/`. Do not place the whole repository inside the plugin ZIP.
+Create the plugin ZIP from the **contents of this directory**, so the archive root contains `.claude-plugin/`, `skills/`, `README.md`, and `LICENSE`. Do not nest the full repository inside the plugin ZIP.
 
 ## Included skills
 
-Ten skills are included. See the main repository README for descriptions and usage notes.
+- `coding-orchestrator`
+- `architecture`
+- `ui-ux-design`
+- `frontend`
+- `backend-data`
+- `debugging`
+- `performance`
+- `security`
+- `testing-quality`
+- `technical-research`
+
+## License
+
+Apache License 2.0. See `LICENSE`.

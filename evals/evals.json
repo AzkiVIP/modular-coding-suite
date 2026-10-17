@@ -1,0 +1,35 @@
+{
+  "skill_name": "ui-ux-design",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Build a website for an independent bicycle repair shop. Its existing logo and brand use bright orange and charcoal. Customers primarily need to compare repair services, understand turnaround expectations, and book a repair. Inspect the existing project first, then recommend a product-specific visual direction and handoff to frontend. Do not invent testimonials or business facts.",
+      "expected_output": "A concise brand-aligned design direction grounded in inspected evidence; clear separation of confirmed facts and proposals; service/booking-focused hierarchy; implementation-ready details; relevant responsive, interaction, and accessibility needs; no unsupported testimonials or generic SaaS template.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Review an appointment scheduling page for a neighborhood clinic. It uses cards for distinct appointment slots, a bright glow behind every section, and nested cards around its filter controls. Consult relevant design references when available, then recommend what to keep, adapt, or remove based on the actual user tasks.",
+      "expected_output": "The assistant consults relevant Slop Catalog entries when accessible, but treats findings contextually: cards may be appropriate for distinct appointment slots, while unnecessary glow and nested surfaces should be challenged if they add no meaning. It identifies actual contrast/hierarchy concerns and states source-access limits honestly.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "A small inventory tool built with vanilla HTML/CSS/JavaScript needs a table for service parts. Staff need to identify low stock and may need sorting and filtering, but they do not need row selection or pagination yet. Consult relevant design references where useful and provide an implementation-ready design handoff. Do not add dependencies.",
+      "expected_output": "The assistant inspects project conventions and, for this substantial component decision, opens the shadcn/ui Components index and relevant Table/Data Table documentation when accessible. It distinguishes the underlying interaction/reference value from framework adoption, specifies meaningful columns, stock status hierarchy, sorting/filtering only as needed, accessibility and responsive handling, and avoids adding selection/pagination that the task does not require.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "In an existing, approved settings page, change the save button to use the already-defined --color-primary-strong token. Do not redesign anything else.",
+      "expected_output": "A focused implementation direction that inspects the relevant token and component, avoids a full brand audit or broad external research, preserves the established design, and asks for only proportionate verification. It does not unnecessarily invoke a full design workflow when no design choice remains open.",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Create a landing page for a youth music festival. The brief explicitly requests a deliberately loud brutalist composition, tightly packed typography, bright red and black, and a few oversized graphic elements. Review common AI-design anti-patterns, but preserve the requested direction unless a specific usability or accessibility problem is found.",
+      "expected_output": "The assistant follows the explicit visual brief instead of rejecting a style merely because it is commonly seen as an anti-pattern. It identifies product-specific opportunities and checks readability, hierarchy, responsiveness, and accessibility, explaining any proposed adjustment in terms of a concrete problem rather than taste.",
+      "files": []
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 A modular, portable collection of ten `SKILL.md` guides designed to instruct AI coding assistants. Start with the orchestrator to select the smallest relevant set of specialist skills, then apply and verify their guidance.
 
-This is the **first public release**. Earlier numbered archives were internal development snapshots; their numbering is not part of the public release sequence.
+This remains the **v1.0.0 project line**. The update in this repository package refines the existing UI/UX skill and adds research/evaluation notes; it does not create a `v1.1.0` release or rewrite the existing `v1.0.0` release tag or its assets.
 
 ## Included Skills
 
@@ -19,26 +19,20 @@ This is the **first public release**. Earlier numbered archives were internal de
 
 ## Important: These Are Instructions for AI Assistants
 
-**The contents of each `SKILL.md` file are instructions intended for an AI assistant to read and apply when performing relevant coding tasks.**
-
-These files are not executable programs, standalone AI models, or merely reference articles. They provide task-specific guidance for how an AI assistant should plan, design, implement, investigate, and verify software.
-
-Users can read, review, and modify these files. However, their primary purpose is to guide the behavior and workflow of an AI coding assistant.
+**The contents of each `SKILL.md` file are instructions intended for an AI assistant to read and apply when performing relevant coding tasks.** They are not executable programs, standalone AI models, or merely reference articles. They provide task-specific guidance for how an AI assistant should plan, design, implement, investigate, and verify software.
 
 The `coding-orchestrator` skill helps the AI determine which specialist skills are relevant to a task. The assistant should use only the necessary specialists instead of blindly applying every skill to every request.
 
-**Important:** Having these files in a repository does not guarantee that an AI assistant will read or follow them. Automatic loading and skill invocation depend on the host AI tool and its configuration.
+Having these files in a repository does not guarantee that an AI assistant will read or follow them. Automatic loading and skill invocation depend on the host AI tool and its configuration.
 
 ## Portable Usage
 
 1. Read [`skills/coding-orchestrator/SKILL.md`](skills/coding-orchestrator/SKILL.md) first.
-2. Follow its selection rules to identify the relevant specialist skills.
+2. Follow its selection rules to identify the smallest relevant set of specialist skills.
 3. Read the selected `SKILL.md` files and apply their instructions to the task.
 4. Verify the actual result and report what was and was not tested.
 
-The suite is a collection of instruction documents, not a runnable application. If the host AI tool cannot automatically load or invoke skills, provide the relevant files to the AI explicitly and tell it to follow their instructions.
-
-Do not claim that a skill was automatically loaded, invoked, or followed unless that actually happened.
+The suite is a collection of instruction documents, not a runnable application. If the host AI tool cannot automatically load or invoke skills, provide the relevant files to the AI explicitly and tell it to follow their instructions. Do not claim that a skill was automatically loaded, invoked, or followed unless that actually happened.
 
 ### Optional: Manual Skill Usage Prompt
 
@@ -58,19 +52,30 @@ Respect the task requirements, higher-priority instructions, and the actual capa
 Verify the result as thoroughly as the available tools allow. Clearly distinguish what was verified from what remains untested. Never claim to have read, applied, or tested something that you did not.
 ```
 
-**Note:** This prompt does not provide access to skill files by itself. Ensure the AI can read the relevant files before using it.
+This prompt does not provide access to skill files by itself. Ensure the AI can read the relevant files before using it.
 
 ## Claude Code Plugin Distribution
 
-A Claude Code plugin package is included under [`distributions/claude-code/`](distributions/claude-code/). Its plugin manifest and skill directory follow Claude Code's plugin layout.
+A Claude Code plugin package is included under [`distributions/claude-code/`](distributions/claude-code/). Its `.claude-plugin/plugin.json` manifest and `skills/` directory follow the plugin layout. A copy of the Apache-2.0 license is included with the distribution.
 
-When creating a plugin release ZIP, package the **contents of the plugin directory**, including `.claude-plugin/` and `skills/`, rather than uploading the whole repository as a plugin.
+When creating a plugin ZIP, package the **contents of `distributions/claude-code/`**, including `.claude-plugin/`, `skills/`, `README.md`, and `LICENSE`, rather than uploading the whole repository as a plugin.
 
-The root `skills/` directory is the canonical portable source. The plugin's `skills/` directory is a distribution copy. When updating skills, synchronize the plugin copy with the canonical source before packaging a new plugin release.
+The root `skills/` directory is the canonical portable source. The plugin's `skills/` directory is a distribution copy; all ten copies in this package are synchronized byte-for-byte with their canonical sources.
+
+## Upgrade Research and Evaluation
+
+- [`docs/ui-ux-design-upgrade-brief.md`](docs/ui-ux-design-upgrade-brief.md) — scope and acceptance criteria.
+- [`docs/ui-ux-design-upgrade-notes.md`](docs/ui-ux-design-upgrade-notes.md) — research sources, findings, and suite integration analysis.
+- [`docs/ui-ux-design-upgrade-test-report.md`](docs/ui-ux-design-upgrade-test-report.md) — structural/packaging checks and their limits.
+- [`evals/evals.json`](evals/evals.json) — five representative evaluation prompts.
+- [`evals/evaluation-rubric.md`](evals/evaluation-rubric.md) — review criteria for paired model evaluations.
+- [`evals/manual-smoke-test.md`](evals/manual-smoke-test.md) — illustrative instruction-level smoke tests, not a paired model benchmark.
+
+The evaluation files define a test plan and document structural checks; they do not claim measured performance improvement. The paired old-versus-new model evaluation and human review of rendered UI remain outstanding.
 
 ## License
 
-Apache 2.0. See [`LICENSE`](LICENSE).
+Apache License 2.0. See [`LICENSE`](LICENSE).
 
 ## Credits
 
