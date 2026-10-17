@@ -1,0 +1,14 @@
+{
+  "name": "modular-coding-suite",
+  "displayName": "Modular Coding Suite",
+  "description": "A modular coding skill suite for architecture, UI/UX, frontend, backend, debugging, performance, security, testing, and technical research.",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "keywords": [
+    "coding",
+    "software-engineering",
+    "ui-ux",
+    "testing",
+    "security"
+  ]
+}
