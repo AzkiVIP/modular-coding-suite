@@ -62,7 +62,7 @@ The root `skills/` directory is the canonical portable source. The plugin's `ski
 
 ## License
 
-MIT. See [`LICENSE`](LICENSE).
+Apache 2.0. See [`LICENSE`](LICENSE).
 
 ## Credits
 
