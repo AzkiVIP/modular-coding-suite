@@ -23,7 +23,7 @@ This is the **first public release**. Earlier numbered archives were internal de
 
 These files are not executable programs, standalone AI models, or merely reference articles. They provide task-specific guidance for how an AI assistant should plan, design, implement, investigate, and verify software.
 
-Humans can read, review, and modify these files. However, their primary purpose is to guide the behavior and workflow of an AI coding assistant.
+Users can read, review, and modify these files. However, their primary purpose is to guide the behavior and workflow of an AI coding assistant.
 
 The `coding-orchestrator` skill helps the AI determine which specialist skills are relevant to a task. The assistant should use only the necessary specialists instead of blindly applying every skill to every request.
 
